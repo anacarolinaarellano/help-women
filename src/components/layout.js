@@ -9,8 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Navbar, Nav, NavDropdown, Button, Form, FormControl} from 'react-bootstrap'
 import Header from "./header"
-import "./layout.css"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,7 +27,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <div >
+        <Navbar style={{height: "80px", backgroundColor:"#C377E0"}}>
+          <Navbar.Brand href="#home" style={{ color: "White", fontWeight:"bold", fontSize:"30px"}}>#TwitterForWomen</Navbar.Brand>
+        </Navbar>
+        
+      </div>
+
+
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,
