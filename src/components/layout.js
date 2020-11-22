@@ -34,9 +34,9 @@ const Layout = ({ children }) => {
         <Navbar style={{height: "80px", backgroundColor:"#C377E0"}}>
           <Navbar.Brand href="#impact" style={{ color: "White", fontWeight:"bold", fontSize:"30px"}}>#TwitterForWomen</Navbar.Brand>
           <div style={{position:"absolute", right:"5px"}}>
-          <Nav.Link href="#impact" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px", marginRight:"1 rem"}}> Our Impact</Nav.Link>
-          <Nav.Link href="#aboutUs" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px", marginRight:"1 rem"}}>About Us</Nav.Link>
-          <Nav.Link href="#association" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px", marginRight:"1 rem"}}>Join As Association</Nav.Link>
+          <Nav.Link href="#impact" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px",paddingRight:"15px"}}> Our Impact</Nav.Link>
+          <Nav.Link href="#aboutUs" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px", paddingRight:"15px"}}>About Us</Nav.Link>
+          <Nav.Link href="#association" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px", paddingRight:"15px"}}>Join As Association</Nav.Link>
           </div>
         </Navbar>
       </div>
