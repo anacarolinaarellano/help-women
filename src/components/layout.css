@@ -1,4 +1,10 @@
-
+.body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  margin-top: 30px;
+  padding: 70px 0;
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

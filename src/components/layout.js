@@ -10,8 +10,10 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Navbar, Nav, NavDropdown, Button, Form, FormControl} from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap'
 import Header from "./header"
+import "../components/style.css"
+
 
 
 const Layout = ({ children }) => {
@@ -27,20 +29,25 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div >
+    
+      <div class="nav-pane">
         <Navbar style={{height: "80px", backgroundColor:"#C377E0"}}>
-          <Navbar.Brand href="#home" style={{ color: "White", fontWeight:"bold", fontSize:"30px"}}>#TwitterForWomen</Navbar.Brand>
+          <Navbar.Brand href="#impact" style={{ color: "White", fontWeight:"bold", fontSize:"30px"}}>#TwitterForWomen</Navbar.Brand>
+          <div style={{position:"absolute", right:"5px"}}>
+          <Nav.Link href="#association" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px"}}>Join As Association</Nav.Link>
+          <Nav.Link href="#aboutUs" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px"}}>About Us</Nav.Link>
+          <Nav.Link href="#impact" class="element" style={{ color: "White", fontWeight:"bold", fontSize:"30px"}}> Our Impact</Nav.Link>
+          </div>
         </Navbar>
-        
       </div>
-
 
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          margin: `0`,
+          padding: `0 1rem 1rem`,
+          boxSizing: "border-box"
+
         }}
       >
         <main>{children}</main>
@@ -49,7 +56,7 @@ const Layout = ({ children }) => {
         }}>
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com">Gatsby</a> during #Codechella!! ;)
         </footer>
       </div>
     </>
